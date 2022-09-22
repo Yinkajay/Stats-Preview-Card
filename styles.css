@@ -22,8 +22,9 @@ body {
 
 main {
   background-color: rgb(51, 51, 22);
-  width: 80vw;
-  height: 65vh;
+  width: 70rem;
+  max-width: 90%;
+  min-height: 65vh;
   display: flex;
   border-radius: 10px;
 }
@@ -32,26 +33,13 @@ main {
 
 .card {
   width: 50%;
-  padding: 5% 14% 5% 7%;
+  /* padding: 5% 14% 5% 7%; */
+  padding: 50px 120px 45px 70px;
   background-color: var(--dark-saturated-blue);
   border-radius: 10px 0 0 10px;
-
-}
-
-/* Image Styles */
-.business-image {
-  width: 50%;
-  background-color: cadetblue;
-  border-radius: 10px;
-  background-color: var(--soft-violet);
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  background-size: contain;
-  border-radius: 0 10px 10px 0;
-  opacity: 0.45;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Text Styles */
@@ -66,7 +54,7 @@ h1 {
 
 .heading {
   /* background-color: green; */
-  padding: 20px 5px;
+  padding: 10px 5px;
 }
 
 .heading span {
@@ -74,17 +62,17 @@ h1 {
 }
 
 .summary {
-  /* background-color: red; */
+  /* background-color: red;   */
   font-size: 14px;
-  line-height: 1.5;
-  padding: 5px;
+  line-height: 2;
+  padding: 10px 5px;
   color: var(--slightly-transparent-white);
 }
 
 .stats {
   /* background-color: blue; */
   padding: 5px;
-  padding-top: 60px;
+  padding-top: 5%;
   display: flex;
   justify-content: space-between;
 }
@@ -102,6 +90,24 @@ h1 {
   color: var(--slightly-transparent-white);
 }
 
+/* Image Styles */
+.business-image {
+  width: 50%;
+  border-radius: 10px;
+  background-color: var(--soft-violet);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  border-radius: 0 10px 10px 0;
+  opacity: 0.45;
+}
+
+
+
+
 /* Footer Styles */
 footer {
   position: absolute;
@@ -118,30 +124,46 @@ footer {
   color: hsl(228, 45%, 44%);
 }
 
+
+
+
+
+@media screen and (min-width:700px) and (max-width:1000px) {
+  .card {
+    padding: 40px 60px 45px 40px;
+  }
+}
+
+
 @media screen and (max-width: 700px) {
   body {
-    /* background-color: white; */
-    padding: 50px 20px;
-    position: absolute;
+    /* background-color: yellow; */
+    padding: 30px 10px 40px;
+    position: relative;
+    /* justify-content: baseline; */
+    /* align-items: baseline; */
   }
 
   main {
     background-color: rgb(51, 51, 22);
-    width: 85vw;
-    height: fit-content;
+    max-width: 90vw;
     display: flex;
     flex-direction: column-reverse;
     border-radius: 10px;
   }
+
   .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     width: 100%;
     min-height: 600px;
-    padding: 9%;
+    padding: 5px;
     background-color: var(--dark-saturated-blue);
     text-align: center;
     border-radius: 0 0 10px 10px;
   }
-  
+
   /* Image Styles */
   .business-image {
     width: 100%;
@@ -151,73 +173,76 @@ footer {
     border-radius: 10px 10px 0 0;
   }
 
-  img{
+  img {
     border-radius: 10px 10px 0 0;
     opacity: 0.45;
   }
+
   /* Text Styles */
   h1,
   p {
     color: white;
   }
-  
+
   h1 {
     font-weight: 700;
   }
-  
+
   .heading {
     /* background-color: green; */
-    padding: 20px 40px  ;
+    padding: 10px 30px;
   }
-  
+
   .heading span {
     color: var(--soft-violet);
   }
-  
+
   .summary {
     /* background-color: red; */
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.5;
-    padding: 25px 65px;
+    padding: 5px 35px 0px;
     color: var(--slightly-transparent-white);
   }
-  
+
   .stats {
     /* background-color: blue; */
-    padding: 15px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 200px;
   }
-  
+
   .digits {
     font-weight: 700;
     font-size: 22px;
     padding-bottom: 5px;
-  
+
   }
-  
+
   .digit-info {
     font-size: 13px;
     font-family: 'Lexend Deca', sans-serif;
     color: var(--slightly-transparent-white);
   }
-  
+
   /* Footer Styles */
   footer {
     position: absolute;
     bottom: 10px;
   }
-  
+
   .attribution {
     font-size: 11px;
     text-align: center;
     color: white;
   }
-  
+
   .attribution a {
     color: hsl(228, 45%, 44%);
+    position: relative;
+    bottom: 0;
   }
 
 }
