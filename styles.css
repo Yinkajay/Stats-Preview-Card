@@ -34,7 +34,8 @@ main {
 .card {
   width: 50%;
   /* padding: 5% 14% 5% 7%; */
-  padding: 50px 120px 45px 70px;
+  padding: 50px 120px 45px 72
+    px;
   background-color: var(--dark-saturated-blue);
   border-radius: 10px 0 0 10px;
   display: flex;
